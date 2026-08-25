@@ -1,0 +1,27 @@
+
+.navbar {
+  display: flex;
+  gap: 10px;
+  padding: 15px 30px;
+  background-color: #ffffff;
+}
+
+.flexList {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navLink {
+  display: flex;  
+  color: #040404;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+}
+
+.navLink:hover {
+  color: #236248;
+}
