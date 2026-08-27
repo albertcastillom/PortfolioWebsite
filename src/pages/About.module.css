@@ -1,0 +1,118 @@
+.aboutPage {
+  min-height: 100vh;
+  color: #17332a;
+  background: #ffffff;
+}
+
+.aboutIntro,
+.aboutPersonal {
+  width: min(1100px, calc(100% - 3rem));
+  margin: 0 auto;
+}
+
+.aboutIntro {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(3rem, 8vw, 7rem);
+  padding: clamp(5rem, 10vw, 9rem) 0;
+}
+
+.aboutIntro > h1 {
+  grid-column: 1;
+  margin: 0;
+  font-family: "Vogue", serif;
+  font-size: clamp(4rem, 9vw, 7.5rem);
+  font-weight: 400;
+  font-synthesis: none;
+  line-height: 0.9;
+}
+
+.aboutTechnicalContent {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+}
+
+.aboutTechnicalContent h2,
+.aboutSectionHeader h2 {
+  margin: 0 0 1.25rem;
+  color: #17332a;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.1;
+}
+
+.aboutTechnicalContent p,
+.aboutSectionHeader > p:last-child,
+.aboutHobbyCard p {
+  color: #496258;
+  line-height: 1.75;
+}
+
+.aboutTechnicalContent p {
+  max-width: 65ch;
+  margin: 0 0 1.25rem;
+  font-size: 1.08rem;
+}
+
+.aboutPersonal {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  border-top: 1px solid rgba(23, 51, 42, 0.18);
+}
+
+.aboutSectionHeader {
+  max-width: 680px;
+  margin-bottom: 3rem;
+}
+
+.aboutSectionHeader > p:last-child {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.aboutHobbyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.aboutHobbyCard {
+  min-height: 155px;
+  padding: 1.75rem;
+  border: 1px solid rgba(23, 51, 42, 0.14);
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.aboutHobbyCard h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.25rem;
+}
+
+.aboutHobbyCard p {
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .aboutIntro {
+    display: block;
+  }
+
+  .aboutIntro > h1 {
+    margin-bottom: 3rem;
+  }
+
+  .aboutHobbyGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .aboutIntro,
+  .aboutPersonal {
+    width: min(100% - 2rem, 1100px);
+  }
+
+  .aboutHobbyGrid {
+    grid-template-columns: 1fr;
+  }
+}

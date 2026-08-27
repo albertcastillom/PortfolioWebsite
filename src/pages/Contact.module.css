@@ -1,0 +1,44 @@
+.contactPage {
+  min-height: 100vh;
+  color: #17332a;
+  background: #ffffff;
+}
+
+.contactIntro {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.25fr);
+  align-items: center;
+  gap: clamp(3rem, 8vw, 7rem);
+  width: min(1100px, calc(100% - 3rem));
+  margin: 0 auto;
+  padding: clamp(5rem, 10vw, 9rem) 0;
+}
+
+.contactHeading {
+  margin: 0;
+  font-family: "Vogue", serif;
+  font-size: clamp(4rem, 9vw, 7.5rem);
+  font-weight: 400;
+  font-synthesis: none;
+  line-height: 0.9;
+}
+
+.contactMessage {
+  max-width: 65ch;
+  margin: 0;
+  color: #496258;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 800px) {
+  .contactIntro {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .contactIntro {
+    width: min(100% - 2rem, 1100px);
+  }
+}

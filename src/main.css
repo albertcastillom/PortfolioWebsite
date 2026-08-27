@@ -1,4 +1,9 @@
-
+@font-face {
+  font-family: 'productDesign';
+  src: url('./assets/fonts/ProductDesign.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'Vogue';

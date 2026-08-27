@@ -1,0 +1,23 @@
+.projectsPage {
+    position: relative;
+    width: 100%;
+    min-height: 80vw;
+    padding: 0;
+    color: white;
+    background-image: url('/GreenMatBackground.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.projectsHeading {
+    margin: 0;
+    font-family: "Vogue", serif;
+    font-size: 6rem;
+    font-synthesis: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    pointer-events: none;
+}

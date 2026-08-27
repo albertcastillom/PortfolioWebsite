@@ -6,7 +6,7 @@
   background-color: #ffffff;
 }
 
-.flexList {
+.navbarList {
     display: flex;
     flex-direction: row;
     list-style-type: none;

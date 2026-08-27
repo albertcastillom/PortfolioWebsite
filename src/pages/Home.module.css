@@ -1,4 +1,4 @@
-.backgroundImage{
+.landingPage {
     display: flex;
     background-image: url('/GreenMatBackground.png');
     background-position: center;
@@ -12,8 +12,10 @@
 }
 
 .landingTitle {
-    font-family: "Vogue";
-    line-height: 1.5; /* This creates healthy spacing between lines */
+    font-family: "Vogue", serif;
+    font-weight: 400;
+    font-synthesis: none;
+    line-height: 1;
     font-size: 6rem;
     color: #ffffff;
     margin: 0;
@@ -25,6 +27,23 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.overlay {
+.landingContent {
     text-align: center;
+}
+
+.landingButtons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.landingButton {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #236248;
+    text-decoration: none;
 }

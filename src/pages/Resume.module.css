@@ -1,0 +1,54 @@
+.resumeContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.resumeHeading {
+    font-family: "Vogue", serif;
+    font-size: 96px;
+    font-weight: 400;
+    font-synthesis: none;
+    line-height: 0.9;
+    margin: 0;
+}
+
+.resumeDownloadButtons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.resumeDownloadButton {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #236248;
+    color: white;
+}
+
+.resumeDownloadButton:hover {
+    background-color: #1a4d3b;
+}
+
+.resumePreview {
+    width: 100%;
+    height: 89vh;
+    min-height: 500px;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    border: none;
+}
+
+.resumePreviewFallback{
+    padding: 40px;
+    text-align: center;
+}
