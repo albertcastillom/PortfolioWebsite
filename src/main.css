@@ -5,6 +5,25 @@
   font-style: normal;
 }
 
+:root {
+  --brand-green: #00a86b;
+  --brand-green-dark: #006b45;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
 @font-face {
   font-family: 'Vogue';
   src: url('./assets/fonts/Vogue.ttf') format('truetype');

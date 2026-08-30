@@ -1,9 +1,9 @@
 import {Link} from 'react-router-dom'
 import styles from './Navbar.module.css'
 
-function Navbar() {
+function Navbar({ onGridBackground = false }) {
   return (
-    <nav className={styles.navbar}>
+    <nav className={`${styles.navbar} ${onGridBackground ? styles.navbarOnGrid : ''}`}>
       <ul className={styles.navbarList}>
         <li><Link to="/" className={styles.navLink} >Home</Link></li>
         <li><Link to="/projects" className={styles.navLink}>Projects</Link></li>

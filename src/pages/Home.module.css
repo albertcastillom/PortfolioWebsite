@@ -1,9 +1,6 @@
 .landingPage {
     display: flex;
-    background-image: url('/GreenMatBackground.png');
-    background-position: center;
-    background-size: cover;
-    min-height: 80vw;
+    min-height: 0;
     width: 100%;
     color: white;
     padding: 0;
@@ -44,6 +41,6 @@
     border-radius: 5px;
     font-weight: bold;
     background-color: #ffffff;
-    color: #236248;
+    color: var(--brand-green-dark);
     text-decoration: none;
 }

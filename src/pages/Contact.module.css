@@ -21,6 +21,7 @@
   font-weight: 400;
   font-synthesis: none;
   line-height: 0.9;
+  color: var(--brand-green-dark);
 }
 
 .contactMessage {

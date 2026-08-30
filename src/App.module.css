@@ -1,0 +1,16 @@
+.gridShell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  color: #ffffff;
+  background-color: var(--brand-green);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.201) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.201) 1px, transparent 1px);
+  background-position: center;
+  background-size: 64px 64px;
+}
+
+.gridShell > main {
+  flex: 1;
+}

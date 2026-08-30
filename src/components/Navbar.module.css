@@ -6,6 +6,10 @@
   background-color: #ffffff;
 }
 
+.navbarOnGrid {
+  background-color: transparent;
+}
+
 .navbarList {
     display: flex;
     flex-direction: row;
@@ -23,5 +27,29 @@
 }
 
 .navLink:hover {
-  color: #236248;
+  color: var(--brand-green);
+}
+
+.navbarOnGrid .navLink {
+  color: #ffffff;
+}
+
+.navbarOnGrid .navLink:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    padding: 12px 10px;
+  }
+
+  .navbarList {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .navLink {
+    padding: 5px;
+    font-size: 0.9rem;
+  }
 }
