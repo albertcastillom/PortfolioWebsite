@@ -1,7 +1,8 @@
 .contactPage {
-  min-height: 100vh;
-  color: #17332a;
-  background: #ffffff;
+  min-height: 75vh;
+  color: #ffffff;
+  background: #17332a;
+  scroll-margin-top: 70px;
 }
 
 .contactIntro {
@@ -17,7 +18,7 @@
 .contactHeading {
   margin: 0;
   font-family: "Vogue", serif;
-  font-size: clamp(4rem, 9vw, 7.5rem);
+  font-size: clamp(3.8rem, 8vw, 7rem);
   font-weight: 400;
   font-synthesis: none;
   line-height: 0.9;
@@ -26,9 +27,29 @@
 .contactMessage {
   max-width: 65ch;
   margin: 0;
-  color: #496258;
+  color: rgba(255, 255, 255, 0.68);
   font-size: 1.08rem;
   line-height: 1.75;
+}
+
+.contactDetails {
+  display: grid;
+  gap: 2rem;
+}
+
+.contactLink {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  text-decoration: none;
+}
+
+.contactLink:hover {
+  border-color: #ffffff;
 }
 
 @media (max-width: 800px) {

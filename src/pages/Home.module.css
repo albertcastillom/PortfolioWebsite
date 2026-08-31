@@ -1,49 +1,122 @@
 .landingPage {
-    display: flex;
-    background-image: url('/GreenMatBackground.png');
-    background-position: center;
-    background-size: cover;
-    min-height: 80vw;
-    width: 100%;
-    color: white;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: calc(100svh - 70px);
+  width: 100%;
+  padding: clamp(5rem, 10vw, 9rem) 5vw;
+  overflow: hidden;
+  color: white;
+  background-color: #163e2f;
+  background-image: linear-gradient(135deg, rgba(5, 27, 20, 0.25), rgba(35, 98, 72, 0.12)), url('/GreenMatBackground.png');
+  background-position: center;
+  background-size: cover;
 }
 
 .landingTitle {
-    font-family: "Vogue", serif;
-    font-weight: 400;
-    font-synthesis: none;
-    line-height: 1;
-    font-size: 6rem;
-    color: #ffffff;
-    margin: 0;
+  max-width: 11ch;
+  margin: 0 auto;
+  color: #ffffff;
+  font-family: "Vogue", serif;
+  font-size: clamp(4.5rem, 12vw, 10rem);
+  font-weight: 400;
+  font-synthesis: none;
+  line-height: 0.82;
+  letter-spacing: -0.045em;
 }
 
 .landingSubtitle {
-    font-size: 1.5rem;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: 1.75rem auto 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.55;
 }
 
 .landingContent {
-    text-align: center;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.intro {
+  margin: 0 0 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.landingEyebrow {
+  position: absolute;
+  top: 2rem;
+  left: 5vw;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.75rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
 }
 
 .landingButtons {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-top: 2.25rem;
 }
 
-.landingButton {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    background-color: #ffffff;
-    color: #236248;
-    text-decoration: none;
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 48px;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 160ms ease, background-color 160ms ease;
+}
+
+.primaryButton {
+  background-color: #ffffff;
+  color: #17332a;
+}
+
+.secondaryButton {
+  color: #ffffff;
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-2px);
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.scrollCue {
+  position: absolute;
+  right: 5vw;
+  bottom: 2rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.72rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+}
+
+@media (max-width: 620px) {
+  .landingPage {
+    min-height: calc(100svh - 62px);
+  }
+
+  .landingEyebrow,
+  .scrollCue {
+    display: none;
+  }
 }

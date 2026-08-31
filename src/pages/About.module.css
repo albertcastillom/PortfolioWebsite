@@ -1,7 +1,8 @@
 .aboutPage {
   min-height: 100vh;
   color: #17332a;
-  background: #ffffff;
+  background: #f7f4ec;
+  scroll-margin-top: 70px;
 }
 
 .aboutIntro,
@@ -17,7 +18,7 @@
   padding: clamp(5rem, 10vw, 9rem) 0;
 }
 
-.aboutIntro > h1 {
+.aboutIntro > h2 {
   grid-column: 1;
   margin: 0;
   font-family: "Vogue", serif;
@@ -97,7 +98,7 @@
     display: block;
   }
 
-  .aboutIntro > h1 {
+  .aboutIntro > h2 {
     margin-bottom: 3rem;
   }
 

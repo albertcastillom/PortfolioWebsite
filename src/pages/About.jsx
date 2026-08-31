@@ -29,9 +29,9 @@ const hobbies = [
 
 export default function About() {
   return (
-    <main className={styles.aboutPage}>
+    <section className={styles.aboutPage} id="about" aria-labelledby="about-heading">
       <section className={styles.aboutIntro} aria-labelledby="about-heading">
-        <h1 id="about-heading">About Me</h1>
+        <h2 id="about-heading">About Me</h2>
         <div className={styles.aboutTechnicalContent}>
           <h2>Building with purpose</h2>
           <p>
@@ -67,6 +67,6 @@ export default function About() {
           ))}
         </div>
       </section>
-    </main>
+    </section>
   );
 }

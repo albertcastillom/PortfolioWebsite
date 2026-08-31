@@ -5,6 +5,37 @@
   font-style: normal;
 }
 
+:root {
+  font-family: Arial, sans-serif;
+  color: #17332a;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+::selection {
+  color: #ffffff;
+  background: #236248;
+}
+
 @font-face {
   font-family: 'Vogue';
   src: url('./assets/fonts/Vogue.ttf') format('truetype');

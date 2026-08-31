@@ -1,26 +1,76 @@
 .scatteredBoard {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    pointer-events: none;
+  position: relative;
+  width: min(1100px, 100%);
+  height: 620px;
+  margin: 2rem auto 0;
+  background-color: transparent;
+  pointer-events: none;
 }
 
 .scatteredCard {
-    position: absolute;
-    width: 200px;
-    padding: 20px;
-    background: white;
-    color: black;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
-    pointer-events: auto;
-    z-index: 1;
+  position: absolute;
+  width: clamp(220px, 27vw, 320px);
+  min-height: 210px;
+  padding: 1.5rem;
+  color: #17332a;
+  background: #f7f2e8;
+  box-shadow: 0 18px 45px rgba(4, 25, 18, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.scatteredCard > span:first-child,
+.scatteredCard p {
+  color: #66756e;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.scatteredCard h3 {
+  margin: 2.75rem 0 0.35rem;
+  font-family: "Vogue", serif;
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.scatteredCard p {
+  margin: 0;
+}
+
+.cardLink {
+  display: block;
+  margin-top: 2rem;
+  font-size: 0.82rem;
+  font-weight: 700;
 }
 
 .scatteredCard:hover {
-    transform: scale(1.05) rotate(0deg) !important;
-    z-index: 10;
+  transform: scale(1.04) rotate(0deg) !important;
+  box-shadow: 0 24px 55px rgba(4, 25, 18, 0.34);
+  z-index: 10;
+}
+
+@media (max-width: 700px) {
+  .scatteredBoard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    height: auto;
+    margin-top: 3rem;
+  }
+
+  .scatteredCard {
+    position: static;
+    width: 100%;
+    min-height: 180px;
+    transform: none !important;
+  }
+
+  .scatteredCard:hover {
+    transform: translateY(-3px) !important;
+  }
 }

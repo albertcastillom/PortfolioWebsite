@@ -1,23 +1,43 @@
 .projectsPage {
-    position: relative;
-    width: 100%;
-    min-height: 80vw;
-    padding: 0;
-    color: white;
-    background-image: url('/GreenMatBackground.png');
-    background-position: center;
-    background-size: cover;
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  padding: clamp(5rem, 9vw, 8rem) 5vw;
+  overflow: hidden;
+  color: white;
+  background-image: linear-gradient(rgba(9, 38, 28, 0.08), rgba(9, 38, 28, 0.2)), url('/GreenMatBackground.png');
+  background-position: center;
+  background-size: cover;
+  scroll-margin-top: 70px;
 }
 
 .projectsHeading {
-    margin: 0;
-    font-family: "Vogue", serif;
-    font-size: 6rem;
-    font-synthesis: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    pointer-events: none;
+  margin: 0.35rem 0 0.75rem;
+  font-family: "Vogue", serif;
+  font-size: clamp(3.8rem, 8vw, 7rem);
+  font-weight: 400;
+  font-synthesis: none;
+  line-height: 0.9;
+}
+
+.projectsHeader {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.projectsHeader > p:first-child {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.projectsHeader > p:last-child {
+  max-width: 50ch;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
 }

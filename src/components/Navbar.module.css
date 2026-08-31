@@ -1,27 +1,75 @@
 
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
-  gap: 10px;
-  padding: 15px 30px;
-  background-color: #ffffff;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+  padding: 0 5vw;
+  border-bottom: 1px solid rgba(23, 51, 42, 0.12);
+  background-color: rgba(250, 249, 244, 0.94);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  color: #17332a;
+  font-family: "Vogue", serif;
+  font-size: 1.45rem;
+  text-decoration: none;
 }
 
 .navbarList {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  align-items: center;
+  gap: clamp(0.25rem, 1.3vw, 1.25rem);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navLink {
-  display: flex;  
-  color: #040404;
+  display: flex;
+  color: #17332a;
   text-decoration: none;
-  font-weight: 500;
-  padding: 5px 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.55rem 0.65rem;
+  border-radius: 999px;
+  transition: color 160ms ease, background-color 160ms ease;
 }
 
 .navLink:hover {
   color: #236248;
+  background: rgba(35, 98, 72, 0.09);
+}
+
+.navLink:focus-visible,
+.brand:focus-visible {
+  outline: 2px solid #236248;
+  outline-offset: 3px;
+}
+
+@media (max-width: 620px) {
+  .navbar {
+    min-height: 62px;
+    padding: 0 0.75rem;
+  }
+
+  .brand {
+    display: none;
+  }
+
+  .navbarList {
+    justify-content: space-between;
+    width: 100%;
+    gap: 0;
+  }
+
+  .navLink {
+    padding: 0.5rem;
+    font-size: 0.78rem;
+  }
 }

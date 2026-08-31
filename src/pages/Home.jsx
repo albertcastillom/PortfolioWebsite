@@ -1,22 +1,45 @@
+import { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import About from './About';
+import Contact from './Contact';
+import Projects from './Projects';
 import styles from './Home.module.css';
-import { Link } from 'react-router-dom';
 
 function Home() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+
+    window.requestAnimationFrame(() => {
+      document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth' });
+    });
+  }, [hash]);
+
   return (
-    <main className={styles.landingPage}>
-      <section className={styles.landingContent}>
-        <h1 className={styles.landingTitle}>Albert Castillo</h1>
-        <p className={styles.landingSubtitle}>Aspiring Full-Stack Software Engineer</p>
-        <p className={styles.landingSubtitle}>Check out my projects and learn more about me!</p>
-        <div className={styles.landingButtons}>
-          <Link className={styles.landingButton} to="/projects">
-            View My Work
-          </Link>
-          <Link className={styles.landingButton} to="/resume">
-            View My Resume
-          </Link>
+    <main>
+      <section className={styles.landingPage} id="home" aria-labelledby="home-heading">
+        <div className={styles.landingEyebrow}>Software engineer · Creative problem solver</div>
+        <div className={styles.landingContent}>
+          <p className={styles.intro}>Hello, I&apos;m</p>
+          <h1 className={styles.landingTitle} id="home-heading">Albert Castillo</h1>
+          <p className={styles.landingSubtitle}>
+            I build thoughtful digital experiences from interface to infrastructure.
+          </p>
+          <div className={styles.landingButtons}>
+            <Link className={styles.primaryButton} to="/#projects">
+              Explore my work <span aria-hidden="true">↓</span>
+            </Link>
+            <Link className={styles.secondaryButton} to="/resume">
+              View resume <span aria-hidden="true">↗</span>
+            </Link>
+          </div>
         </div>
+        <p className={styles.scrollCue}>Scroll to discover</p>
       </section>
+      <Projects />
+      <About />
+      <Contact />
     </main>
   );
 }
