@@ -1,24 +1,43 @@
 .contactPage {
-  min-height: 75vh;
+  min-height: 58vh;
   color: #ffffff;
-  background: #17332a;
+  background-color: #04241b;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.201) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.201) 1px, transparent 1px);
+  background-position: center;
+  background-size: 64px 64px;
   scroll-margin-top: 70px;
 }
 
-.contactIntro {
+.contactContent {
   display: grid;
-  grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.25fr);
-  align-items: center;
-  gap: clamp(3rem, 8vw, 7rem);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.85fr);
+  gap: clamp(3rem, 7vw, 6rem);
   width: min(1100px, calc(100% - 3rem));
   margin: 0 auto;
-  padding: clamp(5rem, 10vw, 9rem) 0;
+  padding: clamp(4.5rem, 8vw, 7rem) 0 2rem;
+}
+
+.contactIntro {
+  align-self: start;
+  min-width: 0;
+}
+
+.contactEyebrow {
+  margin: 0 0 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 .contactHeading {
+  max-width: 7ch;
   margin: 0;
   font-family: "Vogue", serif;
-  font-size: clamp(3.8rem, 8vw, 7rem);
+  font-size: clamp(3.8rem, 6.5vw, 6rem);
   font-weight: 400;
   font-synthesis: none;
   line-height: 0.9;
@@ -26,25 +45,26 @@
 
 .contactMessage {
   max-width: 65ch;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 1.08rem;
-  line-height: 1.75;
+  margin: 1.5rem 0 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
-.contactDetails {
-  display: grid;
-  gap: 2rem;
+.contactLinks {
+  align-self: start;
+  border-top: 1px solid rgba(255, 255, 255, 0.42);
 }
 
 .contactLink {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 1.05rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.42);
   color: #ffffff;
-  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -52,14 +72,46 @@
   border-color: #ffffff;
 }
 
+.linkLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.linkLabel svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 auto;
+}
+
+.footerMeta {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.42);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 @media (max-width: 800px) {
-  .contactIntro {
+  .contactContent {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
 }
 
 @media (max-width: 520px) {
-  .contactIntro {
+  .contactContent {
     width: min(100% - 2rem, 1100px);
+  }
+
+  .footerMeta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }

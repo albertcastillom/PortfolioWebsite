@@ -5,9 +5,12 @@
   padding: clamp(5rem, 9vw, 8rem) 5vw;
   overflow: hidden;
   color: white;
-  background-image: linear-gradient(rgba(9, 38, 28, 0.08), rgba(9, 38, 28, 0.2)), url('/GreenMatBackground.png');
+  background-color: #04241b;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.201) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.201) 1px, transparent 1px);
   background-position: center;
-  background-size: cover;
+  background-size: 64px 64px;
   scroll-margin-top: 70px;
 }
 

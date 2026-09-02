@@ -7,10 +7,12 @@
   padding: clamp(5rem, 10vw, 9rem) 5vw;
   overflow: hidden;
   color: white;
-  background-color: #163e2f;
-  background-image: linear-gradient(135deg, rgba(5, 27, 20, 0.25), rgba(35, 98, 72, 0.12)), url('/GreenMatBackground.png');
+  background-color: #04241b;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.201) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.201) 1px, transparent 1px);
   background-position: center;
-  background-size: cover;
+  background-size: 64px 64px;
 }
 
 .landingTitle {
