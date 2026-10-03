@@ -3,8 +3,8 @@ import styles from './Resume.module.css';
 
 export default function Resume() {
     const pdfUrl = '/Albert_Castillo_Resume.pdf';
-    const docUrl = '/Albert_Castillo_Resume.doc';
-    const fileName = 'Albert_Castillo_Resume';
+    const previewUrl = '/Albert_Castillo_Resume_Preview.png';
+    const fileName = 'Albert_Castillo_Resume_SWE_Software_Development';
 
   return (
     <main className={styles.resumeContainer}>
@@ -13,22 +13,28 @@ export default function Resume() {
         <a href={pdfUrl} download={`${fileName}.pdf`} className={styles.resumeDownloadButton}>
           Download PDF
         </a>
-        <a href={docUrl} download={`${fileName}.doc`} className={styles.resumeDownloadButton}>
-          Download DOC
+        <a
+          href={pdfUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.resumeDownloadButton}
+        >
+          Open PDF
         </a>
       </div>
-      <object
-        className={styles.resumePreview}
-        data={`${pdfUrl}#toolbar=1&navpanes=0`}
-        type="application/pdf"
+      <a
+        className={styles.resumePreviewLink}
+        href={pdfUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open resume PDF in a new tab"
       >
-        <div className={styles.resumePreviewFallback}>
-          <p>Your browser does not support viewing PDFs. Please download the resume to view it.</p>
-          <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
-            Click here to open the resume PDF in a new tab
-          </a>
-        </div>
-      </object>
+        <img
+          className={styles.resumePreview}
+          src={previewUrl}
+          alt="Preview of Albert Castillo's software development resume"
+        />
+      </a>
     </main>
   )
 }
