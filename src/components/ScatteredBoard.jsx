@@ -1,22 +1,47 @@
+import { Link } from "react-router-dom"
+import { featuredProjects } from "../projectsData"
 import styles from "./ScatteredBoard.module.css"
-
-const cardsData = [
-    { id: 1, number: '01', title: 'Portfolio', type: 'Web experience', x: 5, y: 8, rotate: -6 },
-    { id: 2, number: '02', title: 'Full-stack build', type: 'Case study', x: 63, y: 2, rotate: 5 },
-    { id: 3, number: '03', title: 'UI experiment', type: 'Interface study', x: 14, y: 56, rotate: 4 },
-    { id: 4, number: '04', title: 'Next project', type: 'In progress', x: 69, y: 51, rotate: -5 },
-]
-
 
 export default function ScatteredBoard(){
     return (
         <div className={styles.scatteredBoard}>
-            {cardsData.map((card)=>
-                <article key={card.id} className={styles.scatteredCard} style={{top: `${card.y}%`, left: `${card.x}%`, transform: `rotate(${card.rotate}deg)`,}}>
-                    <span>{card.number}</span>
-                    <h3>{card.title}</h3>
-                    <p>{card.type}</p>
-                    <span className={styles.cardLink}>View project ↗</span>
+            {featuredProjects.map((project) =>
+                <article
+                    key={project.slug}
+                    className={styles.scatteredCard}
+                    style={{
+                        top: `${project.card.y}%`,
+                        left: `${project.card.x}%`,
+                        transform: `rotate(${project.card.rotate}deg)`,
+                    }}
+                >
+                    <Link
+                        className={styles.cardOpenLink}
+                        to={`/projects/${project.slug}`}
+                        state={{ openedFromPortfolio: true }}
+                        aria-label={`Open ${project.title} project details`}
+                    />
+                    <div className={styles.cardMeta}>
+                        <span>{project.number}</span>
+                        <span>{project.status}</span>
+                    </div>
+                    <h3>{project.title}</h3>
+                    <p className={styles.cardSummary}>{project.summary}</p>
+                    <ul className={styles.technologyList} aria-label={`${project.title} technologies`}>
+                        {project.technologies.map((technology) => (
+                            <li key={technology}>{technology}</li>
+                        ))}
+                    </ul>
+                    <div className={styles.cardFooter}>
+                        <span>View project <span aria-hidden="true">↗</span></span>
+                        <a
+                            href={project.cardLink.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {project.cardLink.label}
+                        </a>
+                    </div>
                 </article>
             )}
         </div>

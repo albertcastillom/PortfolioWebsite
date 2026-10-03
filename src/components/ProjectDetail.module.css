@@ -1,0 +1,303 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: clamp(0rem, 2vw, 1.5rem);
+  overflow-y: auto;
+  background: rgba(2, 18, 13, 0.86);
+  backdrop-filter: blur(12px);
+  animation: revealOverlay 180ms ease-out;
+}
+
+.projectPage {
+  position: relative;
+  width: min(1120px, 100%);
+  max-height: calc(100svh - clamp(0rem, 4vw, 3rem));
+  overflow-y: auto;
+  color: #17332a;
+  background: #f7f4ec;
+  box-shadow: 0 32px 100px rgba(0, 0, 0, 0.45);
+  animation: revealPage 220ms ease-out;
+}
+
+.closeButton {
+  position: sticky;
+  top: 1rem;
+  left: calc(100% - 4.25rem);
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-bottom: -3.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  color: #ffffff;
+  background: rgba(4, 36, 27, 0.72);
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+
+.closeButton span {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.closeButton:hover,
+.closeButton:focus-visible {
+  color: #17332a;
+  background: #ffffff;
+}
+
+.closeButton:focus-visible {
+  outline: 3px solid #a6d8ba;
+  outline-offset: 3px;
+}
+
+.hero {
+  padding: clamp(5rem, 9vw, 8rem) clamp(1.5rem, 7vw, 6.5rem) clamp(3.5rem, 7vw, 6rem);
+  color: #ffffff;
+  background-color: #04241b;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.heroMeta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 10ch;
+  margin: 2.25rem 0 1.5rem;
+  font-family: "Vogue", serif;
+  font-size: clamp(4rem, 10vw, 8.5rem);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.035em;
+}
+
+.hero > p {
+  max-width: 690px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.65;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.primaryAction,
+.secondaryAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 46px;
+  padding: 0.72rem 1rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 160ms ease, background-color 160ms ease;
+}
+
+.hero .primaryAction {
+  color: #17332a;
+  background: #ffffff;
+}
+
+.hero .secondaryAction {
+  color: #ffffff;
+}
+
+.primaryAction:hover,
+.secondaryAction:hover {
+  transform: translateY(-2px);
+}
+
+.factGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid rgba(23, 51, 42, 0.16);
+  list-style: none;
+}
+
+.factGrid li {
+  min-height: 125px;
+  padding: 1.6rem;
+  border-right: 1px solid rgba(23, 51, 42, 0.16);
+}
+
+.factGrid li:last-child {
+  border-right: 0;
+}
+
+.factGrid span,
+.sectionLabel {
+  color: #67766f;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.factGrid strong {
+  display: block;
+  margin-top: 1rem;
+  font-family: "Vogue", serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.sectionList {
+  padding: clamp(2.5rem, 6vw, 5.5rem) clamp(1.5rem, 7vw, 6.5rem);
+}
+
+.detailSection {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.35fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 5rem);
+  padding: clamp(2.25rem, 5vw, 4.25rem) 0;
+  border-top: 1px solid rgba(23, 51, 42, 0.18);
+}
+
+.sectionLabel {
+  display: flex;
+  gap: 1rem;
+}
+
+.sectionContent h2 {
+  max-width: 14ch;
+  margin: 0;
+  font-family: "Vogue", serif;
+  font-size: clamp(2.3rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.sectionContent > p,
+.sectionContent li {
+  color: #4c5f58;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.sectionContent > p {
+  max-width: 68ch;
+  margin: 1.5rem 0 0;
+}
+
+.sectionContent ul {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.projectFooter {
+  padding: clamp(3.5rem, 7vw, 6rem) clamp(1.5rem, 7vw, 6.5rem);
+  color: #ffffff;
+  background: #17332a;
+}
+
+.projectFooter p {
+  margin: 0;
+  font-family: "Vogue", serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 0.9;
+}
+
+.projectFooter .primaryAction {
+  color: #17332a;
+  background: #ffffff;
+}
+
+.projectFooter .secondaryAction {
+  color: #ffffff;
+}
+
+@keyframes revealOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes revealPage {
+  from { opacity: 0; transform: translateY(24px) scale(0.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 720px) {
+  .overlay {
+    display: block;
+    padding: 0;
+    background: #f7f4ec;
+  }
+
+  .projectPage {
+    width: 100%;
+    max-height: none;
+    min-height: 100svh;
+    box-shadow: none;
+  }
+
+  .factGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .factGrid li:nth-child(2) {
+    border-right: 0;
+  }
+
+  .factGrid li:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(23, 51, 42, 0.16);
+  }
+
+  .detailSection {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 440px) {
+  .factGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .factGrid li,
+  .factGrid li:nth-child(2) {
+    border-right: 0;
+    border-bottom: 1px solid rgba(23, 51, 42, 0.16);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay,
+  .projectPage {
+    animation: none;
+  }
+
+  .primaryAction,
+  .secondaryAction {
+    transition: none;
+  }
+}

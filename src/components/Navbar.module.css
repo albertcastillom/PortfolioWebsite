@@ -43,7 +43,7 @@
 
 .navLink:hover {
   color: #236248;
-  background: rgba(35, 98, 72, 0.09);
+  transform: translateY(-2px);
 }
 
 .navLink:focus-visible,
