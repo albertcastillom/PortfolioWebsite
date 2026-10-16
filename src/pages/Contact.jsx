@@ -1,5 +1,6 @@
 import styles from "./Contact.module.css"
 import { FaEnvelope, FaGithub, FaHandshake, FaLinkedinIn } from "react-icons/fa"
+import { FiArrowUpRight } from "react-icons/fi"
 
 const contactLinks = [
   { label: "Email", href: "mailto:albert.castillom@gmail.com", Icon: FaEnvelope },
@@ -33,7 +34,7 @@ export default function Contact() {
                 <Icon aria-hidden="true" />
                 {label}
               </span>
-              <span aria-hidden="true">↗</span>
+              <FiArrowUpRight aria-hidden="true" focusable="false" />
             </a>
           ))}
         </nav>

@@ -12,8 +12,8 @@
   width: clamp(240px, 29vw, 340px);
   min-height: 250px;
   padding: 1.35rem;
-  color: #17332a;
-  background: #ffffff;
+  color: var(--color-text-primary);
+  background: var(--color-surface);
   box-shadow: 0 18px 45px rgba(4, 25, 18, 0.25);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   pointer-events: auto;
@@ -26,11 +26,6 @@
   z-index: 1;
 }
 
-.scatteredCard:has(.cardOpenLink:focus-visible) {
-  outline: 3px solid #b6e2c8;
-  outline-offset: 5px;
-}
-
 .cardMeta {
   display: flex;
   align-items: flex-start;
@@ -38,7 +33,7 @@
   gap: 1rem;
   color: #66756e;
   font-size: 0.66rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
@@ -50,10 +45,10 @@
 
 .scatteredCard h3 {
   margin: 1.7rem 0 0.55rem;
-  font-family: "Vogue", serif;
+  font-family: var(--font-heading-secondary);
   font-size: clamp(1.8rem, 2.7vw, 2.45rem);
-  font-weight: 400;
-  line-height: 0.95;
+  font-weight: var(--font-weight-heading-secondary);
+  line-height: 1.05;
 }
 
 .cardSummary {
@@ -74,11 +69,11 @@
 
 .technologyList li {
   padding: 0.25rem 0.45rem;
-  border: 1px solid rgba(23, 51, 42, 0.18);
+  border: 1px solid var(--color-border);
   border-radius: 999px;
   color: #5a6c65;
   font-size: 0.62rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 .cardFooter {
@@ -88,11 +83,21 @@
   gap: 0.75rem;
   margin-top: 1.15rem;
   font-size: 0.73rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 .cardFooter > span {
-  color: #17332a;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--color-text-primary);
+}
+
+.cardFooter svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex: 0 0 auto;
+  stroke-width: 2;
 }
 
 .cardFooter a {
@@ -104,9 +109,8 @@
   text-underline-offset: 0.22rem;
 }
 
-.cardFooter a:hover,
-.cardFooter a:focus-visible {
-  color: #17332a;
+.cardFooter a:hover {
+  color: var(--color-text-primary);
 }
 
 .scatteredCard:hover {

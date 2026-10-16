@@ -1,7 +1,7 @@
 .aboutPage {
   min-height: 100vh;
-  color: #17332a;
-  background: #ffffff;
+  color: var(--color-text-primary);
+  background: var(--color-surface);
   scroll-margin-top: 70px;
 }
 
@@ -21,9 +21,9 @@
 .aboutIntro > h2 {
   grid-column: 1;
   margin: 0;
-  font-family: "Vogue", serif;
+  font-family: var(--font-display);
   font-size: clamp(4rem, 9vw, 7.5rem);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   font-synthesis: none;
   line-height: 0.9;
 }
@@ -37,8 +37,10 @@
 .aboutTechnicalContent h2,
 .aboutSectionHeader h2 {
   margin: 0 0 1.25rem;
-  color: #17332a;
+  color: var(--color-text-primary);
+  font-family: var(--font-heading-secondary);
   font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: var(--font-weight-heading-secondary);
   line-height: 1.1;
 }
 
@@ -57,7 +59,7 @@
 
 .aboutPersonal {
   padding: clamp(4rem, 8vw, 7rem) 0;
-  border-top: 1px solid rgba(23, 51, 42, 0.18);
+  border-top: 1px solid var(--color-border);
 }
 
 .aboutSectionHeader {
@@ -79,14 +81,15 @@
 .aboutHobbyCard {
   min-height: 155px;
   padding: 1.75rem;
-  border: 1px solid rgba(23, 51, 42, 0.14);
-  border-radius: 0.75rem;
-  background: #ffffff;
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-surface);
 }
 
 .aboutHobbyCard h3 {
   margin: 0 0 0.7rem;
+  font-family: var(--font-heading-secondary);
   font-size: 1.25rem;
+  font-weight: var(--font-weight-heading-secondary);
 }
 
 .aboutHobbyCard p {

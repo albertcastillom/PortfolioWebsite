@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { FiArrowDown, FiArrowUpRight } from 'react-icons/fi';
 import { Link, useLocation } from 'react-router-dom';
 import About from './About';
 import Contact from './Contact';
@@ -28,10 +29,10 @@ function Home() {
           </p>
           <div className={styles.landingButtons}>
             <Link className={styles.primaryButton} to="/#projects">
-              Explore my work <span aria-hidden="true">↓</span>
+              Explore my work <FiArrowDown aria-hidden="true" focusable="false" />
             </Link>
             <Link className={styles.secondaryButton} to="/resume">
-              View resume <span aria-hidden="true">↗</span>
+              View resume <FiArrowUpRight aria-hidden="true" focusable="false" />
             </Link>
           </div>
         </div>

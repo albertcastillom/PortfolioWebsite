@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react"
+import { FiArrowUpRight, FiX } from "react-icons/fi"
 import { Navigate, useLocation, useNavigate, useParams } from "react-router-dom"
 import { getProjectBySlug } from "../projectsData"
 import styles from "./ProjectDetail.module.css"
@@ -9,7 +10,6 @@ export default function ProjectDetail() {
   const location = useLocation()
   const navigate = useNavigate()
   const projectPageRef = useRef(null)
-  const closeButtonRef = useRef(null)
 
   const closeProject = () => {
     if (location.state?.openedFromPortfolio) {
@@ -23,7 +23,7 @@ export default function ProjectDetail() {
   useEffect(() => {
     const previousOverflow = document.body.style.overflow
     document.body.style.overflow = "hidden"
-    closeButtonRef.current?.focus()
+    projectPageRef.current?.focus()
 
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
@@ -70,19 +70,19 @@ export default function ProjectDetail() {
     >
       <article
         ref={projectPageRef}
+        tabIndex={-1}
         className={styles.projectPage}
         role="dialog"
         aria-modal="true"
         aria-labelledby="project-detail-title"
       >
         <button
-          ref={closeButtonRef}
           className={styles.closeButton}
           type="button"
           onClick={closeProject}
           aria-label="Close project details"
         >
-          <span aria-hidden="true">×</span>
+          <FiX aria-hidden="true" focusable="false" />
         </button>
 
         <header className={styles.hero}>
@@ -144,7 +144,7 @@ function ProjectLinks({ project }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {link.label} <span aria-hidden="true">↗</span>
+          {link.label} <FiArrowUpRight aria-hidden="true" focusable="false" />
         </a>
       ))}
     </div>

@@ -1,14 +1,36 @@
-@font-face {
-  font-family: 'productDesign';
-  src: url('./assets/fonts/ProductDesign.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root {
-  font-family: Arial, sans-serif;
-  color: #17332a;
-  background: #ffffff;
+  /* Typography */
+  --font-display: "Vogue", Georgia, serif;
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-heading-secondary: var(--font-body);
+
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-heading-secondary: var(--font-weight-semibold);
+
+  /* Main surfaces */
+  --color-surface: #ffffff;
+  --color-background-dark: #04241b;
+
+  /* Text */
+  --color-text-primary: #17332a;
+  --color-text-muted: #4c5f58;
+  --color-text-on-dark: #ffffff;
+  --color-text-on-dark-muted: rgba(255, 255, 255, 0.75);
+
+  /* Interactive colors */
+  --color-accent: #236248;
+  --color-accent-hover: #1a4d3b;
+
+  /* Borders */
+  --color-border: rgba(23, 51, 42, 0.18);
+  --color-border-strong: #000000;
+  --color-border-on-dark: rgba(255, 255, 255, 0.42);
+
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background: var(--color-surface);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -32,13 +54,14 @@ a {
 }
 
 ::selection {
-  color: #ffffff;
-  background: #236248;
+  color: var(--color-text-on-dark);
+  background: var(--color-accent);
 }
 
 @font-face {
   font-family: 'Vogue';
   src: url('./assets/fonts/Vogue.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }

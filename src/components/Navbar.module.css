@@ -9,13 +9,14 @@
   min-height: 70px;
   padding: 0 5vw;
   border-bottom: 1px solid rgba(23, 51, 42, 0.12);
-  background-color: rgba(255, 255, 255, 0.94);
+  background-color: var(--color-surface);
   backdrop-filter: blur(14px);
 }
 
 .brand {
-  color: #17332a;
-  font-family: "Vogue", serif;
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-regular);
   font-size: 1.45rem;
   text-decoration: none;
 }
@@ -31,10 +32,10 @@
 
 .navLink {
   display: flex;
-  color: #17332a;
+  color: var(--color-text-primary);
   text-decoration: none;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   letter-spacing: 0.02em;
   padding: 0.55rem 0.65rem;
   border-radius: 999px;
@@ -42,14 +43,8 @@
 }
 
 .navLink:hover {
-  color: #236248;
+  color: var(--color-accent);
   transform: translateY(-2px);
-}
-
-.navLink:focus-visible,
-.brand:focus-visible {
-  outline: 2px solid #236248;
-  outline-offset: 3px;
 }
 
 @media (max-width: 620px) {

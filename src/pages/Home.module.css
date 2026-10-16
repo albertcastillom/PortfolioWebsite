@@ -6,8 +6,8 @@
   width: 100%;
   padding: clamp(5rem, 10vw, 9rem) 5vw;
   overflow: hidden;
-  color: white;
-  background-color: #04241b;
+  color: var(--color-text-on-dark);
+  background-color: var(--color-background-dark);
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.201) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.201) 1px, transparent 1px);
@@ -18,10 +18,10 @@
 .landingTitle {
   max-width: 11ch;
   margin: 0 auto;
-  color: #ffffff;
-  font-family: "Vogue", serif;
+  color: var(--color-text-on-dark);
+  font-family: var(--font-display);
   font-size: clamp(4.5rem, 12vw, 10rem);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   font-synthesis: none;
   line-height: 0.82;
   letter-spacing: -0.045em;
@@ -45,7 +45,7 @@
   margin: 0 0 1rem;
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -77,18 +77,26 @@
   padding: 0.8rem 1.2rem;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 999px;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   text-decoration: none;
   transition: transform 160ms ease, background-color 160ms ease;
 }
 
+.primaryButton svg,
+.secondaryButton svg {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  stroke-width: 2;
+}
+
 .primaryButton {
-  background-color: #ffffff;
-  color: #17332a;
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
 }
 
 .secondaryButton {
-  color: #ffffff;
+  color: var(--color-text-on-dark);
 }
 
 .primaryButton:hover,

@@ -4,8 +4,8 @@
   min-height: 100svh;
   padding: clamp(5rem, 9vw, 8rem) 5vw;
   overflow: hidden;
-  color: white;
-  background-color: #04241b;
+  color: var(--color-text-on-dark);
+  background-color: var(--color-background-dark);
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.201) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.201) 1px, transparent 1px);
@@ -16,9 +16,9 @@
 
 .projectsHeading {
   margin: 0.35rem 0 0.75rem;
-  font-family: "Vogue", serif;
+  font-family: var(--font-display);
   font-size: clamp(3.8rem, 8vw, 7rem);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   font-synthesis: none;
   line-height: 0.9;
 }
@@ -33,7 +33,7 @@
   margin: 0;
   color: rgba(255, 255, 255, 0.65);
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
@@ -41,6 +41,6 @@
 .projectsHeader > p:last-child {
   max-width: 50ch;
   margin: 0;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--color-text-on-dark-muted);
   line-height: 1.6;
 }

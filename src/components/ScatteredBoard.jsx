@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { FiArrowUpRight } from "react-icons/fi"
 import { featuredProjects } from "../projectsData"
 import styles from "./ScatteredBoard.module.css"
 
@@ -33,7 +34,10 @@ export default function ScatteredBoard(){
                         ))}
                     </ul>
                     <div className={styles.cardFooter}>
-                        <span>View project <span aria-hidden="true">↗</span></span>
+                        <span>
+                            View project
+                            <FiArrowUpRight aria-hidden="true" focusable="false" />
+                        </span>
                         <a
                             href={project.cardLink.url}
                             target="_blank"
