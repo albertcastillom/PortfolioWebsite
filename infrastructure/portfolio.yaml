@@ -114,7 +114,10 @@ Resources:
               StringEquals:
                 token.actions.githubusercontent.com:aud: sts.amazonaws.com
               StringLike:
-                token.actions.githubusercontent.com:sub: !Sub "repo:${GitHubRepository}:ref:refs/heads/main"
+                token.actions.githubusercontent.com:sub:
+                  - !Sub "repo:${GitHubRepository}:ref:refs/heads/main"
+                  # Repositories created after July 15, 2026 use immutable IDs.
+                  - "repo:albertcastillom@138737311/PortfolioWebsite@1345465831:ref:refs/heads/main"
       Policies:
         - PolicyName: PublishPortfolio
           PolicyDocument:
